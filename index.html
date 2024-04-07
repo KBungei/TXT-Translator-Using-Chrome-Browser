@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>File Reader App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+
+  <header>
+    <div id="translatorTabSwitchDiv">Traslator Tab</div>
+    <div id="instructionsTabSwitchDiv">Instructions Tab</div>
+  </header>
+
+  <main>
+
+    <div id="translatorDiv">
+      <div id="configDiv">
+        <span>
+          <strong>Encoding:</strong>
+          <!--
+              <option value=""></option>
+            -->
+
+          <select id="encodingSelect" title="Encoding Select">
+            <optgroup label="Unicode">
+              <option value="utf-8">UTF-8</option>
+              <option value="utf-16">UTF-16</option>
+            </optgroup>
+            <optgroup label="Chinese">
+              <option value="gb18030">GB18030</option>
+              <option value="gbk">GBK</option>
+            </optgroup>
+            <!--
+                <option value="windows-1252">Windows-1252</option>
+                <option value="ISO-8859-2">ISO-8859-2</option>
+                <option value="ANSI">ANSI</option>
+              -->
+          </select>
+        </span>
+
+        <span>
+          <strong>Lines at a time:</strong>
+          <input title="Lines count input" type="number" id="linesCountInput" value="1000">
+          <button id="setLinesCountBtn" type="button">Set</button>
+        </span>
+
+        <span>
+          <input title="file input" type="file" id="fileInput">
+        </span>
+      </div>
+
+      <div id="textDisplayDiv"></div>
+
+      <div id="buttonsDiv">
+
+        <span>
+          <strong>Continue</strong> loads the <strong>Next</strong> batch of Lines, or <strong>Saves To File</strong>
+          when progress is <strong>100%</strong>.
+          <button id="continueBtn">Continue</button>
+        </span>
+
+        <span id="progressNumSpan"></span>
+
+      </div>
+
+    </div>
+
+
+    <div id="infoDiv">
+      <h2>Instructions:</h2>
+      <p>
+        Start by clicking "<strong>Choose file</strong>" and open a txt file from your local storage.
+        <br>
+        A <strong>copy</strong> will be loaded to your browser.
+        <br>
+        <br>
+        <strong>NOTE:</strong> The original file will not be edited/changed whatsoever, the text file you get when you
+        are done is a completely different file.
+        <br>
+        <br>
+        The file, if a valid txt, should then be displayed in the middle of screen, the "text area", a *set* number of
+        lines at a time. 1000 being the default.
+      </p>
+
+      <p>
+        <br>
+        If you are seeing strange characters like "�����Ϊ" try selecting a different encoding.
+      </p>
+      <br>
+      <p>
+        The default encoding <strong>UTF-8</strong> is widely supported, but you may try <strong>UTF-16</strong> which
+        covers more characters.
+      </p>
+      <br>
+      <p>
+        If you expecting Traditional Chinese or Simplified Chinese characters,
+        or CJK (Chinese, Japanese, Korean) characters
+        <br>
+        and neither of unicode options work, a safe bet would be <strong>GBK</strong>,
+        or better yet, try the more comprehensive <strong>GB18030</strong>.
+      </p>
+
+      <p>
+        <br>
+        To <strong>Translate</strong> on <strong>Google Chrome</strong> browser,
+        <br>
+        Right click the page, scroll and select "translate to *your default language*".
+        <br>
+        Scroll down the text area to confirm the translation for the current batch of lines has finished.
+      </p>
+
+      <p>
+        Click on the "Continue" button to move on to the next batch of lines
+        <br>
+        <br>
+      </p>
+    </div>
+
+  </main>
+
+  <script src=".\main.mjs" type="module"></script>
+  <script src=".\modules\indexdb.mjs" type="module"></script>
+
+</body>
+
+</html>

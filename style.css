@@ -1,0 +1,103 @@
+/* Rows */
+
+header {
+    height: 10vh;
+}
+
+main {
+    height: 90vh;
+}
+
+#translatorDiv {
+    height: 100%;
+}
+
+/* Rows */
+
+/* main Rows */
+/* Translator Pane Rows */
+#configDiv {
+    height: 10%;
+}
+
+#textDisplayDiv {
+    height: 80%;
+}
+
+/* #textDisplayDiv > pre */
+#textDisplayDiv>pre {
+    width: 95%;
+}
+
+/* #textDisplayDiv > pre */
+#buttonDiv {
+    height: 10%;
+}
+
+/* Translator Pane Rows */
+/* InfoDiv Pane Rows */
+#infoDiv {
+    display: flex;
+    height: 100%;
+}
+
+#infoDiv>p,
+#infoDiv>h2 {
+    width: 50%;
+    margin: auto;
+}
+
+/* InfoDiv Pane Rows */
+/* main Rows */
+
+header,
+#textDisplayDiv,
+#configDiv,
+#buttonsDiv {
+    display: flex;
+}
+
+header>div,
+#configDiv>span,
+#buttonsDiv>span,
+pre {
+    margin: auto;
+}
+
+pre {
+    height: 100%;
+    width: 95%;
+    overflow-y: auto;
+}
+
+#infoDiv {
+    display: none;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header {
+    background-color: green;
+    text-decoration: solid;
+    font-size: large;
+}
+
+main {
+    background-color: yellow;
+}
+
+pre {
+    background-color: white;
+}
+
+#progressNumSpan {
+    background-color: plum;
+}
+
+#infoDiv {
+    background-color: plum;
+    width: 100%;
+    overflow-y: auto;
+}
