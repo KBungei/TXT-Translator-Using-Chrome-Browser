@@ -148,6 +148,13 @@ class TranslationHandler {
 }
 
 setLinesCountBtn.addEventListener("click", function(e) {
+    let userSetEncoding = linesCountInput.value;
+
+    if (!userSetEncoding) {
+        userSetEncoding = "1000";
+        linesCountInput.value = userSetEncoding;
+    }
+
     localStorage.setItem('userSetLinesCount', linesCountInput.value);
     location.href = location.href;
 });
