@@ -68,6 +68,7 @@ pre {
     height: 100%;
     width: 95%;
     overflow-y: auto;
+    transition: transform 20s;
 }
 
 #infoDiv {

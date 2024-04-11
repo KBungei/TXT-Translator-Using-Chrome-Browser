@@ -37,11 +37,16 @@
               <option value="gb18030">GB18030</option>
               <option value="gbk">GBK</option>
             </optgroup>
+            <option value="ISO-8859-16">ISO-8859-16</option>
+            <option value="windows-1258">Windows-1258</option>
             <!--
-                <option value="windows-1252">Windows-1252</option>
-                <option value="ISO-8859-2">ISO-8859-2</option>
-                <option value="ANSI">ANSI</option>
-              -->
+              <option value=""></option>
+              ISO-8859-16
+              windows-1258
+              <option value="windows-1252">Windows-1252</option>
+              <option value="ISO-8859-2">ISO-8859-2</option>
+              <option value="ANSI">ANSI</option>
+            -->
           </select>
         </span>
 
@@ -63,6 +68,7 @@
         <span>
           <strong>Continue</strong> loads the <strong>Next</strong> batch of Lines, or <strong>Saves To File</strong>
           when progress is <strong>100%</strong>.
+          <button id="autoScrollPreBtn">Auto Scroll</button>
           <button id="continueBtn">Continue</button>
         </span>
 
@@ -125,8 +131,8 @@
 
   </main>
 
-  <script src=".\main.mjs" type="module"></script>
-  <script src=".\modules\indexdb.mjs" type="module"></script>
+  <script src=".\js\classes.js"></script>
+  <script src=".\main.js"></script>
 
 </body>
 
